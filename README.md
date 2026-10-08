@@ -1,4 +1,4 @@
-# CIFAR-10 CNN Pipeline
+# CIFAR-10 CNN Classification Pipeline
 
 This project implements an end-to-end CIFAR-10 image classification
 pipeline using PyTorch, Git, DVC and DagsHub.
