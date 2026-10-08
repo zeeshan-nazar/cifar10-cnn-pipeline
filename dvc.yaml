@@ -4,15 +4,14 @@ stages:
     cmd: python src/prepare.py
     deps:
       - src/prepare.py
-      - data/raw
     outs:
-      - data/prepared
-
+      - data/raw
+      
   preprocess:
     cmd: python src/preprocess.py
     deps:
       - src/preprocess.py
-      - data/prepared
+      - data/raw
     outs:
       - data/processed
 
