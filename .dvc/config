@@ -1,0 +1,5 @@
+[cache]
+    type = copy
+['remote "origin"']
+    url = s3://dvc
+    endpointurl = https://dagshub.com/zeeshan-nazar/cifar10-cnn-pipeline.s3
