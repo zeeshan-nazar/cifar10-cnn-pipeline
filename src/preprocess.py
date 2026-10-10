@@ -32,8 +32,10 @@ def main():
     mean = torch.tensor([0.4914, 0.4822, 0.4465]).view(1, 3, 1, 1)
     std = torch.tensor([0.2023, 0.1994, 0.2010]).view(1, 3, 1, 1)
 
-    train_images = (train_images - mean) / std
-    test_images = (test_images - mean) / std
+    #train_images = (train_images - mean) / std
+    #test_images = (test_images - mean) / std
+    train_images = (train_images - 0.5) / 0.5
+    test_images = (test_images - 0.5) / 0.5
 
     # Shuffle and create validation split
     generator = torch.Generator().manual_seed(seed)
