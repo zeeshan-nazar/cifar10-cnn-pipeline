@@ -8,4 +8,4 @@ train:
   dropout_rate: 0.5
   learning_rate: 0.001
   epochs: 15
-  batch_size: 128
+  batch_size: 64

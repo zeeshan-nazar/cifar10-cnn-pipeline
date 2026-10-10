@@ -1,12 +1,39 @@
+
 stages:
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+      - src/prepare.py
+    outs:
+      - data/raw/
+
+  preprocess:
+    cmd: python src/preprocess.py
+    deps:
+      - src/preprocess.py
+      - params.yaml
+      - data/raw/
+    outs:
+      - data/processed/
+
+  train:
+    cmd: python src/train.py
+    deps:
+      - src/train.py
+      - params.yaml
+      - data/processed/train.pt
+      - data/processed/val.pt
+    outs:
+      - models/
+
   evaluate:
     cmd: python src/evaluate.py
     deps:
-    - src/evaluate.py
-    - params.yaml
-    - data/processed/test.pt
-    - models/model.pth
+      - src/evaluate.py
+      - params.yaml
+      - data/processed/test.pt
+      - models/model.pth
     outs:
-    - confusion_matrix.png
+      - confusion_matrix.png
     metrics:
-    - metrics.json
+      - metrics.json
