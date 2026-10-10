@@ -13,3 +13,6 @@ data/processed/
 models/
 
 .ipynb_checkpoints/
+/data
+/confusion_matrix.png
+
