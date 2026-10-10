@@ -29,10 +29,9 @@ stages:
   evaluate:
     cmd: python src/evaluate.py
     deps:
-      - src/evaluate.py
-      - params.yaml
-      - data/processed/test.pt
-      - models/model.pth
+    - src/evaluate.py
+    - params.yaml
+    - data/processed/test.pt
     outs:
       - confusion_matrix.png
     metrics:
