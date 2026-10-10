@@ -5,7 +5,6 @@ stages:
     - src/evaluate.py
     - params.yaml
     - data/processed/test.pt
-    - models/model.pth
     outs:
     - confusion_matrix.png
     metrics:
